@@ -27,8 +27,8 @@ function calcTip(x) {
    
       let tipPercent = Number(document.querySelector(x).value);
       let tip = (bill * tipPercent) / 100;
-      tipAmount = tip / people;
-      total = (bill + tip) / people;
+      tipAmount = (tip / people).toFixed(3);
+      total = ((bill + tip) / people).toFixed(3);
       document.querySelector(`#valuetip`).textContent = `$` + tipAmount;
       document.querySelector(`#valuetotal`).textContent = `$` + total;
    
