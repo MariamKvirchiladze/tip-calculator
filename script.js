@@ -24,25 +24,25 @@ function calcTip(x) {
   if (bill != 0 && people != 0) {
     removeError();
 
-    document.querySelector(x).addEventListener(`click`, function () {
+   
       let tipPercent = Number(document.querySelector(x).value);
       let tip = (bill * tipPercent) / 100;
       tipAmount = tip / people;
       total = (bill + tip) / people;
       document.querySelector(`#valuetip`).textContent = `$` + tipAmount;
       document.querySelector(`#valuetotal`).textContent = `$` + total;
-    });
+   
   } else {
     addError();
   }
 }
 
 function reset() {
-  document.querySelector(`#reset`).addEventListener(`click`, function () {
+ 
     document.querySelector(`#bill`).value = ``;
     document.querySelector(`#people`).value = ``;
     removeError();
     document.querySelector(`#valuetip`).textContent = `$0.00`;
     document.querySelector(`#valuetotal`).textContent = `$0.00`;
-  });
+
 }
